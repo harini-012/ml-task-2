@@ -15,6 +15,8 @@ df=load_data()
 df.columns=df.columns.str.strip()
 st.subheader("Dataset preview")
 st.write(df.head())
+st.subheader("📊 Dataset Statistics")
+st.write(df.describe())
 features=['RM','LSTAT','PTRATIO','INDUS','NOX','AGE']
 target='MEDV'
 X=df[features]
